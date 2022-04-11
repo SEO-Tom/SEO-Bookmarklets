@@ -1,0 +1,26 @@
+(function(){
+    let values = [];
+    let nodes = [];
+    nodes = document.querySelectorAll(".g .rc");
+    let serpCount = 0;
+    for (let i = 0; i < nodes.length; i++) {
+        let node = nodes[i];
+        const anchorNode = node.querySelector("a");
+        let urlNode = window.getComputedStyle(anchorNode);
+        if (urlNode.visibility == "hidden"){
+            continue
+        }
+        serpCount += 1;
+        const obj = {}
+        obj.position = serpCount;
+        obj.url = node.querySelector("a").getAttribute("href").toString();
+        values.push(obj);
+    }
+    let lineItem = "";
+    values.forEach(item=>{
+    lineItem += `${item.position}: ${item.url},
+`
+    })
+    alert(lineItem);
+
+})();

@@ -1,0 +1,1 @@
+javascript:(function()%7Blet%20imageNodes%20%3D%20document.querySelectorAll(%22img%22)%3Bfor%20(let%20image%20of%20imageNodes%20)%7Blet%20attributes%20%3D%20image.attributes%3Bfor(let%20attribute%20of%20attributes)%7Bif(attribute.name%20%3D%3D%3D%20%22loading%22)%7Bimage.style.border%20%3D%20%223px%20dashed%20red%22%3Bconsole.log(image)%3B%7D%7D%7D%7D)()
