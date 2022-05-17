@@ -3,6 +3,9 @@ A collection of bookmarklets aimed at helping SEOs to be more productive
 
 ## Table of Contents
 
+### Add SERP Numbers to Results
+A script which adds numbers to SERP listings [source](https://github.com/SEO-Tom/SEO-Bookmarklets/blob/main/add-numbers-to-SERP.js) | [min](https://github.com/SEO-Tom/SEO-Bookmarklets/blob/main/add-numbers-to-SERP-min.js)
+
 ### Headings Outline
 This script highlights and adds labels to headings indicating their level
 [source](https://github.com/SEO-Tom/SEO-Bookmarklets/blob/main/HeadingsOutline.js) | [min](https://github.com/SEO-Tom/SEO-Bookmarklets/blob/main/HeadingsOutline-min.js)
