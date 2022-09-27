@@ -1,0 +1,74 @@
+function run(){
+
+    let hreflangs = document.querySelectorAll("[rel='alternate'],[rel='alternate']");
+    let drawer = `<div class="metaBlockModal" >
+    <span class="metaBlockModal-closeButton" ></span>
+    <h1> Hreflang List </h1>
+        <ul id="results-ul">
+        </ul>
+
+        <style>
+        .bold {
+            font-weight: 700;
+        }
+        .metaBlockModal{
+            display: block;
+            width: 100%;
+            background-color: lightgray;
+            z-index: 100000000;
+            padding: 30px 0px 20px 30%;
+            position:relative;
+            line-height: 18px;
+            font-size: 16px;
+            font-family: helvetica,serif;
+        }
+        .metaBlockModal-closeButton{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            border: 1px solid black;
+            padding: 10px 15px;
+            border-radius:50%;
+            cursor:pointer;
+            background-color: white;
+            
+        }
+        .metaBlockModal-closeButton:after{
+            content: "+";
+            font-size: 1rem;
+        }
+        .metaBlockModal-closeButton:hover{
+            transform: rotate(45deg);
+            background-color: black;
+            color: white;
+        }
+
+        .hreflang-link {
+            text-decoration: underline;
+            color: black;
+        }
+
+        .hreflang-link:hover, .hreflang-link:focus {
+            text-decoration: underline;
+            color: white;
+        }
+        </style>
+        </div>
+    </div>`;
+    document.body.insertAdjacentHTML("afterbegin",drawer);
+    let hrefLangsLis;
+    let resultsUL = document.getElementById("results-ul");
+
+    for (let i = 0; i < hreflangs.length; i++){
+        hrefLangsLis = `<li>
+        <span class="bold">Market</span>: <span class="hreflang-val">${hreflangs[i].hreflang}</span> 
+        <span class="bold">HREF</span>: <a class="hreflang-link" target="__blank" href="${hreflangs[i].href}"><span class="hreflang-url">${hreflangs[i].href}</span></a>
+        </li>`;
+        resultsUL.insertAdjacentHTML("afterbegin",hrefLangsLis)
+
+    }
+    document.querySelector(".metaBlockModal-closeButton").addEventListener("click",(e)=>{
+        document.querySelector(".metaBlockModal").remove();
+    })
+}
+run();
