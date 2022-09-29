@@ -1,6 +1,6 @@
 function run(){
 
-    let hreflangs = document.querySelectorAll("[rel='alternate'],[rel='alternate']");
+    let hreflangs = document.querySelectorAll("[rel='hreflang']");
     if(hreflangs.length === 0 ){
         alert("No HREFLang Values Found");
     } else {
