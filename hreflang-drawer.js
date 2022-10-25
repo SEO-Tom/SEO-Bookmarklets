@@ -7,13 +7,16 @@ function run(){
     let drawer = `<div class="metaBlockModal" >
     <span class="metaBlockModal-closeButton" ></span>
     <div class="wrapper">
-        <h1 class="bold"> Hreflang List </h1>
+        <h1 class="bold mb-10"> Hreflang List </h1>
             <ul id="results-ul">
             </ul>
     </div>
         <style>
         .bold {
             font-weight: 700;
+        }
+        .mb-10 {
+            margin-bottom: 10px;
         }
         .wrapper {
             width: 90%;
